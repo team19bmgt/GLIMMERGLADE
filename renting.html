@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental Bikes - Saigon Bikes</title>
+    <title>Renting - Rental Bike</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -24,26 +24,99 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
-     5,000 VND/day</p>
-                <button>Rent Now</button>
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .renting {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .bike-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .bike {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        .bike:hover {
+            transform: scale(1.05);
+        }
+        .bike h3 {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        .bike p {
+            font-size: 16px;
+            color: #555;
+        }
+        .rent-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .rent-button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Rental Bike</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="renting.html">Renting</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="renting">
+        <h2>Bike Rental Options</h2>
+        <div class="bike-list">
+            <div class="bike">
+                <h3>Regular Bike</h3>
+                <p>A simple and comfortable bike for city rides and daily commuting.</p>
+                <a href="payment.html" class="rent-button">Rent Now</a>
             </div>
-            <div class="product">
-                <img src="bike2.jpg" alt="Mountain Bike">
+            <div class="bike">
                 <h3>Mountain Bike</h3>
-                <p>Rental Price: 5,000 VND/day</p>
-                <button>Rent Now</button>
+                <p>Perfect for off-road adventures and challenging terrains.</p>
+                <a href="payment.html" class="rent-button">Rent Now</a>
             </div>
-            <div class="product">
-                <img src="bike3.jpg" alt="Folding Bike">
-                <h3>Folding Bike</h3>
-                <p>Rental Price: 5,000 VND/day</p>
-                <button>Rent Now</button>
-            </div>
-            <div class="product">
-                <img src="bike4.jpg" alt="Touring Bike">
-                <h3>Touring Bike</h3>
-                <p>Rental Price: 5,000 VND/day</p>
-                <button>Rent Now</button>
+            <div class="bike">
+                <h3>Bike with Cargo Box</h3>
+                <p>Ideal for carrying goods or extra luggage while riding.</p>
+                <a href="payment.html" class="rent-button">Rent Now</a>
             </div>
         </div>
     </section>
