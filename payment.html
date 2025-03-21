@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Rental Bike</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #f4f4f4;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: #333;
+            color: white;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .payment {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .option {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .option:hover {
+            transform: scale(1.05);
+        }
+        .option h3 {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        .option p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Rental Bike</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sanpham.html">Rental Bikes</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="payment">
+        <h2>Payment Methods</h2>
+        <div class="payment-options">
+            <div class="option">
+                <h3>E-Wallet</h3>
+                <p>Fast and secure payments through popular e-wallets.</p>
+            </div>
+            <div class="option">
+                <h3>Online Banking</h3>
+                <p>Pay directly from your bank account with online banking.</p>
+            </div>
+            <div class="option">
+                <h3>Cash</h3>
+                <p>Pay with cash at our rental locations.</p>
+            </div>
+            <div class="option">
+                <h3>Momo</h3>
+                <p>Convenient payment using Momo, the leading Vietnamese e-wallet.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
