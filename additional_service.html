@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Services - Saigon Bikes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #f4f4f4;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: #333;
+            color: white;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .service-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .service {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+            width: 100%;
+        }
+        .service:hover {
+            transform: scale(1.05);
+        }
+        .loyalty {
+            font-size: 24px;
+            font-weight: bold;
+            background: #ffcc00;
+        }
+        .bottom-services {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Saigon Bikes</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="renting.html">Renting</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="additional_service.html">Additional Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="services">
+        <h2>Additional Services</h2>
+        <div class="service-list">
+            <div class="service loyalty">
+                <h3>Customer Loyalty Program</h3>
+                <p>Your Points: <span id="points">0</span></p>
+            </div>
+            <div class="bottom-services">
+                <div class="service">
+                    <h3>Adventure Tours</h3>
+                    <p>Join our guided bike tours to explore beautiful trails and scenic routes.</p>
+                </div>
+                <div class="service">
+                    <h3>Riding Accessories</h3>
+                    <p>We offer gloves, sunglasses, and energy gels to enhance your riding experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
