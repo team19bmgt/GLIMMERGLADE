@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cho Thuê Xe Đạp - ListnRide Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #008080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #008080;
+            font-size: 18px;
+        }
+        .hero {
+            background: url('hero-bike.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .bike {
+            display: inline-block;
+            width: 250px;
+            margin: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .bike img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .bike h3 {
+            margin: 10px 0;
+        }
+        .bike p {
+            color: #555;
+        }
+        .bike button {
+            background: #008080;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>Cho Thuê Xe Đạp</header>
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#bikes">Thuê xe</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+    <div class="hero">Thuê Xe Đạp Dễ Dàng & Nhanh Chóng</div>
+    <div class="container" id="bikes">
+        <h2>Danh Sách Xe Đạp</h2>
+        <div class="bike">
+            <img src="bike1.jpg" alt="Xe Đạp Địa Hình">
+            <h3>Xe Đạp Địa Hình</h3>
+            <p>Giá: 50,000 VND/h</p>
+            <button>Thuê Ngay</button>
+        </div>
+        <div class="bike">
+            <img src="bike2.jpg" alt="Xe Đạp Đua">
+            <h3>Xe Đạp Đua</h3>
+            <p>Giá: 70,000 VND/h</p>
+            <button>Thuê Ngay</button>
+        </div>
+        <div class="bike">
+            <img src="bike3.jpg" alt="Xe Đạp Thường">
+            <h3>Xe Đạp Thường</h3>
+            <p>Giá: 30,000 VND/h</p>
+            <button>Thuê Ngay</button>
+        </div>
+    </div>
+</body>
+</html>
