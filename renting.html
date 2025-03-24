@@ -19,147 +19,105 @@
             align-items: center;
         }
 
-        header {
-            width: 100%;
+        .renting-container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            padding: 15px 30px;
+            margin-top: 50px;
+        }
+
+        .rent-option {
             background: rgba(0, 0, 0, 0.7);
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li {
-            display: inline;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .hero {
-            width: 100%;
-            text-align: center;
-            background: url('bikes-banner.jpg') no-repeat center center;
-            background-size: cover;
-            padding: 100px 20px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 20px;
-        }
-
-        .bike-category {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            margin-top: 30px;
-            width: 100%;
-        }
-
-        .bike-box {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
+            margin: 20px;
             border-radius: 10px;
-            width: 250px;
-            color: black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: center;
+            width: 80%;
+            max-width: 400px;
         }
 
-        .bike-box img {
-            width: 100%;
-            max-width: 200px; /* Hạn chế kích thước ảnh */
-            height: auto;
-            border-radius: 5px;
+        .rent-option h2 {
             margin-bottom: 10px;
         }
 
-        .rent-button {
-            padding: 10px 20px;
-            background: #ff9900;
+        .rent-btn {
+            background: #007BFF;
             color: white;
             border: none;
+            padding: 10px 15px;
+            font-size: 18px;
             border-radius: 5px;
-            font-size: 16px;
             cursor: pointer;
-            text-decoration: none;
             margin-top: 10px;
         }
 
-        .rent-button:hover {
-            background: #e68a00;
+        .rent-btn:hover {
+            background: #0056b3;
         }
 
-        @media (max-width: 768px) {
-            .bike-box {
-                width: 200px;
-            }
-            .bike-box img {
-                max-width: 150px;
-            }
+        .bike-options {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .bike-options button {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .bike-options button:hover {
+            background: #218838;
         }
     </style>
+    <script>
+        function toggleBikeOptions(id) {
+            var options = document.getElementById(id);
+            if (options.style.display === "block") {
+                options.style.display = "none";
+            } else {
+                options.style.display = "block";
+            }
+        }
+    </script>
 </head>
 <body>
-    <header>
-        <div class="logo">Rental Bikes</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="renting.html">Renting</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="payment.html">Payment</a></li>
-                <li><a href="additional_service.html">Additional Service</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="renting-container">
+        <div class="rent-option">
+            <h2>Rent Per Ride</h2>
+            <button class="rent-btn" onclick="toggleBikeOptions('ride-options')">RENT NOW</button>
+            <div class="bike-options" id="ride-options">
+                <button onclick="location.href='payment.html'">Regular Bike (3.000đ)</button>
+                <button onclick="location.href='payment.html'">Mountain Bike (5.000đ)</button>
+                <button onclick="location.href='payment.html'">Bike with Cargo Box (3.000đ)</button>
+            </div>
+        </div>
 
-    <section class="hero">
-        <h1>Choose Your Bike</h1>
-        <p>Find the perfect ride for your next adventure!</p>
-    </section>
+        <div class="rent-option">
+            <h2>Rent Per Hour</h2>
+            <button class="rent-btn" onclick="toggleBikeOptions('hour-options')">RENT NOW</button>
+            <div class="bike-options" id="hour-options">
+                <button onclick="location.href='payment.html'">Regular Bike (10.000đ)</button>
+                <button onclick="location.href='payment.html'">Mountain Bike (14.000đ)</button>
+                <button onclick="location.href='payment.html'">Bike with Cargo Box (10000đ)</button>
+            </div>
+        </div>
 
-    <section class="bike-category">
-        <div class="bike-box">
-            <img src="https://xedapgiakho.com/wp-content/uploads/2023/01/Xe-Dap-Nu-Brave-Will-Relax-2-Suon-mau-kem-2.jpg" alt="Regular Bike">
-            <h3>Regular Bike</h3>
-            <p>Comfortable for city rides.</p>
-            <a href="payment.html" class="rent-button">Rent Now</a>
+        <div class="rent-option">
+            <h2>Rent Per Day</h2>
+            <button class="rent-btn" onclick="toggleBikeOptions('day-options')">RENT NOW</button>
+            <div class="bike-options" id="day-options">
+                <button onclick="location.href='payment.html'">Regular Bike (35.000đ)</button>
+                <button onclick="location.href='payment.html'">Mountain Bike (40.000đ)</button>
+                <button onclick="location.href='payment.html'">Bike with Cargo Box (35.000)</button>
+            </div>
         </div>
-        <div class="bike-box">
-            <img src="https://xedapgiakho.com/wp-content/uploads/2025/02/Xe-Dap-Dia-Hinh-MTB-Kalman-24-Inch.jpg" alt="Mountain Bike">
-            <h3>Mountain Bike</h3>
-            <p>Perfect for off-road adventures.</p>
-            <a href="payment.html" class="rent-button">Rent Now</a>
-        </div>
-        <div class="bike-box">
-            <img src="https://www.rei.com/dam/content_team_060419_01373_use_cargo_bike_hero_lg.jpg?t=ea16by9lg" alt="Bike with Cargo Box">
-            <h3>Bike with Cargo Box</h3>
-            <p>Ideal for carrying extra load.</p>
-            <a href="payment.html" class="rent-button">Rent Now</a>
-        </div>
-    </section>
+    </div>
 </body>
 </html>
