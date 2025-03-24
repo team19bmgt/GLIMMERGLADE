@@ -11,16 +11,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background: url('https://static.scientificamerican.com/sciam/cache/file/0AFEBE44-BADA-49A1-81BC1B0877541D26_source.jpg?w=900') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
+            background: #f4f4f4;
         }
-        .bike-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
         header {
             display: flex;
             justify-content: space-between;
@@ -37,7 +29,44 @@
             list-style: none;
             display: flex;
             gap: 20px;
-        white;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .payment {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .option {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .option:hover {
+            transform: scale(1.05);
+        }
+        .option h3 {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        .option p {
+            font-size: 16px;
+            color: #555;
         }
     </style>
 </head>
@@ -59,19 +88,19 @@
         <h2>Payment Methods</h2>
         <div class="payment-options">
             <div class="option">
-                <p>E-Wallet</p>
+                <h3>E-Wallet</h3>
                 <p>Fast and secure payments through popular e-wallets.</p>
             </div>
             <div class="option">
-                <p>Online Banking</p>
+                <h3>Online Banking</h3>
                 <p>Pay directly from your bank account with online banking.</p>
             </div>
             <div class="option">
-                <p>Cash</p>
+                <h3>Cash</h3>
                 <p>Pay with cash at our rental locations.</p>
             </div>
             <div class="option">
-                <p>Momo</p>
+                <h3>Momo</h3>
                 <p>Convenient payment using Momo, the leading Vietnamese e-wallet.</p>
             </div>
         </div>
