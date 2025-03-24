@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Rental Bikes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('https://static.scientificamerican.com/sciam/cache/file/0AFEBE44-BADA-49A1-81BC1B0877541D26_source.jpg?w=900') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .contact-container {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            width: 80%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-container h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .form-container {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            color: black;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        form button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        form button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Rental Bikes</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="renting.html">Renting</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="additional_service.html">Additional Service</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-container">
+        <h1>Get in Touch</h1>
+        <div class="contact-info">
+            <p><strong>General Contact Info</strong></p>
+            <p><strong>Every Day:</strong> 8 am – 6 pm</p>
+            <p><strong>Address:</strong> V.Đ4,Thoi Hoa Street,Ben Cat, Binh Duong, Vietnam</p>
+            <p><strong>Phone:</strong> +84 123 456 789</p>
+            <p><strong>Email:</strong> contact@rentalbikes.com</p>
+        </div>
+
+        <h2>Got Questions? Write Us</h2>
+        <div class="form-container">
+            <form action="submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="phone" placeholder="Your Phone (Optional)">
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="question" rows="4" placeholder="Your Question" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
