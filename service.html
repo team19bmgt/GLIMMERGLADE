@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Rental Bike</title>
+    <title>Our Services - Rental Bikes</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -14,68 +14,79 @@
             background: url('https://static.scientificamerican.com/sciam/cache/file/0AFEBE44-BADA-49A1-81BC1B0877541D26_source.jpg?w=900') no-repeat center center fixed;
             background-size: cover;
             color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .bike-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
+
         header {
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 30px;
-            background: #333;
-            color: white;
+            background: rgba(0, 0, 0, 0.7);
         }
+
         .logo {
             font-size: 24px;
             font-weight: bold;
         }
+
         nav ul {
             list-style: none;
             display: flex;
             gap: 20px;
         }
+
         nav ul li {
             display: inline;
         }
+
         nav ul li a {
             color: white;
             text-decoration: none;
             font-size: 18px;
         }
-        .services {
+
+        .services-section {
             text-align: center;
-            padding: 50px 20px;
+            margin: 50px 0;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
         }
-        .service-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+
+        .services-section h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .service-box {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .service {
-            background: white;
             border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            width: 280px;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .service:hover {
-            transform: scale(1.05);
-        }
-        .service h3 {
-            margin: 10px 0;
-            font-size: 22px;
-            color: #555;
-        }
-        .service p {
-            font-size: 16px;
-            color: #555;
+
+        .service-box img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -85,28 +96,32 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="renting.html">Renting Bikes</a></li>
+                <li><a href="renting.html">Renting</a></li>
                 <li><a href="service.html">Services</a></li>
                 <li><a href="payment.html">Payment</a></li>
                 <li><a href="additional_service.html">Additional Service</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="service-list">
-            <div class="service">
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <h1>Our Services</h1>
+        <div class="services-container">
+            <div class="service-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5PqKo8aXwcXEuRIFBo16iNBKollQGM7i-GQ&s" alt="Tracking Booth">
                 <h3>Tracking Booth</h3>
-                <p>We offer real-time tracking booths at strategic locations to ensure your safety and convenience during your ride.</p>
+                <p>Get real-time location tracking for your rides.</p>
             </div>
-            <div class="service">
+            <div class="service-box">
+                <img src="https://www.paj-gps.com/wp-content/uploads/2023/11/Blog-banner-Bicycle-tracking-1024x683.jpg.webp" alt="GPS Tracking">
                 <h3>GPS Tracking</h3>
-                <p>Stay on the right path with our GPS tracking service, allowing you to navigate easily and track your journey in real-time.</p>
+                <p>Stay on track with our advanced GPS navigation.</p>
             </div>
-            <div class="service">
-                <h3>Customer Support</h3>
-                <p>Need assistance? Our 24/7 customer support team is always ready to help with any questions or issues during your rental.</p>
+            <div class="service-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVtYt807jp942n8jU-aIGn8y3zd1LRITXYAw&s" alt="Customer Support">
+                <h3>24/7 Customer Support</h3>
+                <p>We're here to assist you at any time.</p>
             </div>
         </div>
     </section>
