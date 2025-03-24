@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renting - Rental Bike</title>
+    <title>Renting - Rental Bikes</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -14,90 +14,116 @@
             background: url('https://static.scientificamerican.com/sciam/cache/file/0AFEBE44-BADA-49A1-81BC1B0877541D26_source.jpg?w=900') no-repeat center center fixed;
             background-size: cover;
             color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .bike-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-        }
+
         header {
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 30px;
-            background: #333;
-            color: white;
+            background: rgba(0, 0, 0, 0.7);
         }
+
         .logo {
             font-size: 24px;
             font-weight: bold;
         }
+
         nav ul {
             list-style: none;
             display: flex;
             gap: 20px;
         }
+
         nav ul li {
             display: inline;
         }
+
         nav ul li a {
             color: white;
             text-decoration: none;
             font-size: 18px;
         }
-        .renting {
+
+        .hero {
+            width: 100%;
             text-align: center;
-            padding: 50px 20px;
+            background: url('bikes-banner.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 100px 20px;
         }
-        .bike-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .bike-category {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .bike-box {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .bike {
-            background: white;
             border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            text-align: center;
+            width: 250px;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .bike:hover {
-            transform: scale(1.05);
+
+        .bike-box img {
+            width: 100%;
+            max-width: 200px; /* Hạn chế kích thước ảnh */
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
-        .bike h3 {
-            margin: 10px 0;
-            font-size: 22px;
-        }
-        .bike p {
-            font-size: 16px;
-            color: #555;
-        }
+
         .rent-button {
-            margin-top: 10px;
             padding: 10px 20px;
-            background: #007bff;
+            background: #ff9900;
             color: white;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
             font-size: 16px;
+            cursor: pointer;
             text-decoration: none;
-            display: inline-block;
+            margin-top: 10px;
         }
+
         .rent-button:hover {
-            background: #0056b3;
+            background: #e68a00;
+        }
+
+        @media (max-width: 768px) {
+            .bike-box {
+                width: 200px;
+            }
+            .bike-box img {
+                max-width: 150px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">Rental Bike</div>
+        <div class="logo">Rental Bikes</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -108,25 +134,30 @@
             </ul>
         </nav>
     </header>
-    
-    <section class="renting">
-        <h2>Bike Rental Options</h2>
-        <div class="bike-list">
-            <div class="bike">
-                <h3>Regular Bike</h3>
-                <p>A simple and comfortable bike for city rides and daily commuting.</p>
-                <a href="payment.html" class="rent-button">Rent Now</a>
-            </div>
-            <div class="bike">
-                <h3>Mountain Bike</h3>
-                <p>Perfect for off-road adventures and challenging terrains.</p>
-                <a href="payment.html" class="rent-button">Rent Now</a>
-            </div>
-            <div class="bike">
-                <h3>Bike with Cargo Box</h3>
-                <p>Ideal for carrying goods or extra luggage while riding.</p>
-                <a href="payment.html" class="rent-button">Rent Now</a>
-            </div>
+
+    <section class="hero">
+        <h1>Choose Your Bike</h1>
+        <p>Find the perfect ride for your next adventure!</p>
+    </section>
+
+    <section class="bike-category">
+        <div class="bike-box">
+            <img src="images/regular-bike.jpg" alt="Regular Bike">
+            <h3>Regular Bike</h3>
+            <p>Comfortable for city rides.</p>
+            <a href="payment.html" class="rent-button">Rent Now</a>
+        </div>
+        <div class="bike-box">
+            <img src="images/mountain-bike.jpg" alt="Mountain Bike">
+            <h3>Mountain Bike</h3>
+            <p>Perfect for off-road adventures.</p>
+            <a href="payment.html" class="rent-button">Rent Now</a>
+        </div>
+        <div class="bike-box">
+            <img src="images/cargo-bike.jpg" alt="Bike with Cargo Box">
+            <h3>Bike with Cargo Box</h3>
+            <p>Ideal for carrying extra load.</p>
+            <a href="payment.html" class="rent-button">Rent Now</a>
         </div>
     </section>
 </body>
