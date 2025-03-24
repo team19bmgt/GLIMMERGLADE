@@ -3,30 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Rental Bike</title>
+    <title>Home - Rental Bikes</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .about-us {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 40px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 800px;
-    margin: 50px auto;
-    color: black;
-}
-
-.about-us h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.about-us p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -35,49 +14,56 @@
             background: url('https://static.scientificamerican.com/sciam/cache/file/0AFEBE44-BADA-49A1-81BC1B0877541D26_source.jpg?w=900') no-repeat center center fixed;
             background-size: cover;
             color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .bike-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
+
         header {
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 30px;
             background: rgba(0, 0, 0, 0.7);
         }
+
         .logo {
             font-size: 24px;
             font-weight: bold;
         }
+
         nav ul {
             list-style: none;
             display: flex;
             gap: 20px;
         }
+
         nav ul li {
             display: inline;
         }
+
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 18px;
         }
+
         .hero {
             text-align: center;
             padding: 100px 20px;
         }
+
         .hero h1 {
-            font-size: 50px;
+            font-size: 48px;
             margin-bottom: 20px;
         }
+
         .hero p {
-            font-size: 30px;
+            font-size: 20px;
             margin-bottom: 30px;
         }
+
         .cta-button {
             padding: 15px 30px;
             background: #ff9900;
@@ -88,8 +74,70 @@
             cursor: pointer;
             text-decoration: none;
         }
+
         .cta-button:hover {
             background: #e68a00;
+        }
+
+        /* What We Offer Section */
+        .offer-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+        }
+
+        .offer-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .offer-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .offer-box {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .offer-box img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        /* About Us Section */
+        .about-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            width: 100%;
+        }
+
+        .about-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -112,31 +160,34 @@
         <p>Explore the city with our premium bike rentals. Ride freely, explore endlessly.</p>
         <a href="renting.html" class="cta-button">Rent a Bike Now</a>
     </section>
-<section class="bike-category">
-    <div class="bike-box">
-        <img src="https://www.theproscloset.com/cdn/shop/articles/Hero-Road-vs-gravel-bike.jpg?v=1645824869&width=1080" alt="Regular Bike" class="bike-image">
-        <h3>Regular Bike</h3>
-        <p>Comfortable for city rides.</p>
-        <a href="payment.html" class="cta-button">Rent Now</a>
-    </div>
-    <div class="bike-box">
-        <img src="icons/mountain-bike.png" alt="Mountain Bike">
-        <h3>Mountain Bike</h3>
-        <p>Perfect for off-road adventures.</p>
-        <a href="payment.html" class="cta-button">Rent Now</a>
-    </div>
-    <div class="bike-box">
-        <img src="325d0e1d2d59b0c14f317740a12c5a60.jpg" alt="Bike with Cargo Box">
-        <h3>Bike with Cargo Box</h3>
-        <p>Ideal for carrying extra load.</p>
-        <a href="payment.html" class="cta-button">Rent Now</a>
-    </div>
-</section>
+
+    <!-- What We Offer Section -->
+    <section class="offer-section">
+        <h2>What We Offer</h2>
+        <div class="offer-container">
+            <div class="offer-box">
+                <img src="https://static.scientificamerican.com/sciam/cache/file/0AFEBE44-BADA-49A1-81BC1B0877541D26_source.jpg?w=900" alt="Quality Bikes">
+                <h3>Quality Bikes</h3>
+                <p>Top-notch bikes for every terrain.</p>
+            </div>
+            <div class="offer-box">
+                <img src="https://ae01.alicdn.com/kf/Sf93ccf3eff654a338e77412368b80a40t.jpg" alt="GPS Tracking">
+                <h3>GPS Tracking</h3>
+                <p>Real-time navigation and safety.</p>
+            </div>
+            <div class="offer-box">
+                <img src="https://i0.wp.com/crmviet.vn/wp-content/uploads/2022/05/Anh-chup-Man-hinh-2022-05-19-luc-21.19.07-1.png?ssl=1" alt="Customer Support">
+                <h3>24/7 Support</h3>
+                <p>We're always here to help you.</p>
+            </div>
+        </div>
     </section>
-    <section class="about-us">
-    <h2>About Us</h2>
-    <p>We are passionate about providing high-quality rental bikes for city explorers and adventure seekers. Our goal is to make your journey smooth, enjoyable, and eco-friendly.</p>
-    <p>With a variety of bikes to choose from, we ensure you have the perfect ride for your trip.</p>
-</section>
+
+    <!-- About Us Section -->
+    <section class="about-section">
+        <h2>About Us</h2>
+        <p>At Rental Bikes, we are passionate about making cycling accessible and enjoyable for everyone. Whether you’re a tourist exploring the city or a local looking for a reliable ride, we have the perfect bike for you.</p>
+    </section>
+
 </body>
 </html>
