@@ -12,17 +12,15 @@
             padding: 0;
             box-sizing: border-box;
             background: #f4f4f4;
+        }
         header {
-    background-image: url('https://static.scientificamerican.com/sciam/cache/file/0AFEBE44-BADA-49A1-81BC1B0877541D26_source.jpg?w=900');
-    background-size: cover;
-    background-position: center;
-    height: 300px; 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    color: white;
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: #333;
+            color: white;
+        }
         .logo {
             font-size: 24px;
             font-weight: bold;
@@ -44,15 +42,6 @@
             text-align: center;
             padding: 50px 20px;
         }
-            .bike-box img {
-    width: 80px; 
-    height: auto; 
-}
-@media (max-width: 768px) {
-    .bike-box img {
-        width: 60px; 
-    }
-}
         .bike-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -99,7 +88,6 @@
 </head>
 <body>
     <header>
-         <img src="https://europeforvisitors.com/paris/images/600/bicycles-velib-stand-near-delphines-600-00551.jpg?ezimgfmt=ng%3Awebp%2Fngcb15" class="renting-banner">
         <div class="logo">Rental Bike</div>
         <nav>
             <ul>
@@ -112,26 +100,25 @@
         </nav>
     </header>
     
-<section class="bike-category">
-    <div class="bike-box">
-        <img src="https://xedapgiakho.com/wp-content/uploads/2023/01/Xe-Dap-Nu-Brave-Will-Relax-2-Suon-mau-kem-2.jpg" alt="Regular Bike">
-        <h3>Regular Bike</h3>
-        <p>Comfortable for city rides.</p>
-        <a href="payment.html" class="cta-button">Rent Now</a>
-    </div>
-    <div class="bike-box">
-        <img src="https://xedapgiakho.com/wp-content/uploads/2025/02/Xe-Dap-Dia-Hinh-MTB-Kalman-24-Inch.jpg" alt="Mountain Bike">
-        <h3>Mountain Bike</h3>
-        <p>Perfect for off-road adventures.</p>
-        <a href="payment.html" class="cta-button">Rent Now</a>
-    </div>
-    <div class="bike-box">
-        <img src="https://m.media-amazon.com/images/I/71nW+86ILHL._AC_SX569_.jpg" alt="Bike with Cargo Box">
-        <h3>Bike with Cargo Box</h3>
-        <p>Ideal for carrying extra load.</p>
-        <a href="payment.html" class="cta-button">Rent Now</a>
-    </div>
-</section>
-
+    <section class="renting">
+        <h2>Bike Rental Options</h2>
+        <div class="bike-list">
+            <div class="bike">
+                <h3>Regular Bike</h3>
+                <p>A simple and comfortable bike for city rides and daily commuting.</p>
+                <a href="payment.html" class="rent-button">Rent Now</a>
+            </div>
+            <div class="bike">
+                <h3>Mountain Bike</h3>
+                <p>Perfect for off-road adventures and challenging terrains.</p>
+                <a href="payment.html" class="rent-button">Rent Now</a>
+            </div>
+            <div class="bike">
+                <h3>Bike with Cargo Box</h3>
+                <p>Ideal for carrying goods or extra luggage while riding.</p>
+                <a href="payment.html" class="rent-button">Rent Now</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
