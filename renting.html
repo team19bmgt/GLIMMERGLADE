@@ -19,6 +19,36 @@
             align-items: center;
         }
 
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
         .renting-container {
             display: flex;
             flex-direction: column;
@@ -87,7 +117,8 @@
         }
     </script>
 </head>
-        <header>
+<body>
+    <header>
         <div class="logo">Rental Bikes</div>
         <nav>
             <ul>
@@ -100,7 +131,7 @@
             </ul>
         </nav>
     </header>
-<body>
+    
     <div class="renting-container">
         <div class="rent-option">
             <h2>Rent Per Ride</h2>
@@ -128,7 +159,7 @@
             <div class="bike-options" id="day-options">
                 <button onclick="location.href='payment.html'">Regular Bike (35.000đ)</button>
                 <button onclick="location.href='payment.html'">Mountain Bike (40.000đ)</button>
-                <button onclick="location.href='payment.html'">Bike with Cargo Box (35.000)</button>
+                <button onclick="location.href='payment.html'">Bike with Cargo Box (35.000đ)</button>
             </div>
         </div>
     </div>
