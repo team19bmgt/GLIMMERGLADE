@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment - Rental Bike</title>
+    <title>Payment - Rental Bikes</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -11,68 +11,104 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background: #f4f4f4;
+            background: url('https://fastpayltd.co.uk/wp-content/uploads/2020/01/list-of-payment-methods.jpg?width=750&name=list-of-payment-methods.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
         header {
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 30px;
-            background: #333;
-            color: white;
+            background: rgba(0, 0, 0, 0.7);
         }
+
         .logo {
             font-size: 24px;
             font-weight: bold;
         }
+
         nav ul {
             list-style: none;
             display: flex;
             gap: 20px;
         }
+
         nav ul li {
             display: inline;
         }
+
         nav ul li a {
             color: white;
             text-decoration: none;
             font-size: 18px;
         }
-        .payment {
+
+        .payment-container {
             text-align: center;
-            padding: 50px 20px;
+            margin-top: 50px;
         }
-        .payment-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
+            margin-top: 30px;
         }
-        .option {
-            background: white;
+
+        .payment-box {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
             border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            width: 250px;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .option:hover {
-            transform: scale(1.05);
+
+        .payment-box img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
         }
-        .option h3 {
-            margin: 10px 0;
-            font-size: 22px;
-        }
-        .option p {
+
+        .pay-button {
+            padding: 10px 20px;
+            background: #ff9900;
+            color: white;
+            border: none;
+            border-radius: 5px;
             font-size: 16px;
-            color: #555;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .pay-button:hover {
+            background: #e68a00;
+        }
+
+        @media (max-width: 768px) {
+            .payment-box {
+                width: 200px;
+            }
+            .payment-box img {
+                width: 60px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">Rental Bike</div>
+        <div class="logo">Rental Bikes</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -83,25 +119,33 @@
             </ul>
         </nav>
     </header>
-    
-    <section class="payment">
-        <h2>Payment Methods</h2>
-        <div class="payment-options">
-            <div class="option">
+
+    <section class="payment-container">
+        <h1>Choose Your Payment Method</h1>
+        <div class="payment-methods">
+            <div class="payment-box">
+                <img src="icons/e-wallet.png" alt="E-Wallet">
                 <h3>E-Wallet</h3>
-                <p>Fast and secure payments through popular e-wallets.</p>
+                <p>Fast and secure mobile payments.</p>
+                <button class="pay-button">Pay Now</button>
             </div>
-            <div class="option">
+            <div class="payment-box">
+                <img src="icons/online-banking.png" alt="Online Banking">
                 <h3>Online Banking</h3>
-                <p>Pay directly from your bank account with online banking.</p>
+                <p>Convenient online transactions.</p>
+                <button class="pay-button">Pay Now</button>
             </div>
-            <div class="option">
+            <div class="payment-box">
+                <img src="icons/cash.png" alt="Cash">
                 <h3>Cash</h3>
-                <p>Pay with cash at our rental locations.</p>
+                <p>Pay in cash at our store.</p>
+                <button class="pay-button">Pay Now</button>
             </div>
-            <div class="option">
+            <div class="payment-box">
+                <img src="icons/momo.png" alt="Momo">
                 <h3>Momo</h3>
-                <p>Convenient payment using Momo, the leading Vietnamese e-wallet.</p>
+                <p>Popular e-wallet in Vietnam.</p>
+                <button class="pay-button">Pay Now</button>
             </div>
         </div>
     </section>
