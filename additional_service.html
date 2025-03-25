@@ -75,7 +75,7 @@
             max-width: 1000px;
         }
 
-        .service-box {
+        .service-box, .stats-box, .points-system {
             text-align: center;
             background: rgba(255, 255, 255, 0.9);
             padding: 20px;
@@ -87,8 +87,7 @@
             align-items: center;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
-
-        .service-box img {
+              .service-box img {
             width: 100%;
             max-width: 150px; /* Giới hạn kích thước ảnh */
             height: auto;
@@ -96,21 +95,15 @@
         }
 
         .points-system {
-            text-align: center;
             background: rgba(255, 223, 186, 0.9);
-            padding: 30px;
-            border-radius: 10px;
-            width: 350px;
             font-size: 24px;
             font-weight: bold;
-            color: black;
         }
 
-        .service-layout {
+        .stats-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
+            justify-content: center;
+            gap: 50px;
         }
 
         .service-row {
@@ -120,7 +113,7 @@
         }
 
         @media (max-width: 768px) {
-            .service-row {
+            .service-row, .stats-container {
                 flex-direction: column;
                 align-items: center;
                 gap: 20px;
@@ -149,11 +142,13 @@
     </section>
 
     <div class="service-container">
-        <!-- Hệ thống tích điểm ở trên cùng (chính giữa) -->
         <div class="points-system">
             Customer Points: <span id="customer-points">0</span> 🌟
         </div>
-
+        <div class="stats-container">
+            <div class="stats-box">Calories Burned: <span id="calories">0</span>🔥kcal</div>
+            <div class="stats-box">Distance Traveled: <span id="distance">0</span> km</div>
+        </div>
         <div class="service-row">
             <div class="service-box">
                 <img src="https://www.conicaltravel.com/wp-content/uploads/2019/09/CA02-ava-373x249.jpg" alt="Adventure Tour">
@@ -169,7 +164,6 @@
     </div>
 
     <script>
-        // Kiểm tra nếu có điểm trong localStorage, nếu không thì để 0
         document.getElementById('customer-points').innerText = localStorage.getItem('points') || 0;
     </script>
 </body>
