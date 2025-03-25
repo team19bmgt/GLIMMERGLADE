@@ -26,6 +26,7 @@
             border-radius: 10px;
             text-align: center;
             font-size: 20px;
+            color: white;
         }
 
         .hidden {
@@ -43,6 +44,7 @@
             flex-direction: column;
             align-items: center;
         }
+
         header {
             width: 100%;
             display: flex;
@@ -120,6 +122,33 @@
             background: #e68a00;
         }
 
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            color: white;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
         @media (max-width: 768px) {
             .payment-box {
                 width: 200px;
@@ -152,37 +181,58 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/1796/1796828.png" alt="E-Wallet">
                 <h3>E-Wallet</h3>
                 <p>Fast and secure mobile payments.</p>
-                <button class="pay-button" onclick="showModal()">Pay Now</button>
+                <button class="pay-button" onclick="showForm()">Pay Now</button>
             </div>
+                  <div class="payment-methods">
             <div class="payment-box">
-                <img src="https://png.pngtree.com/png-clipart/20210829/original/pngtree-online-banking-icon-png-png-image_6684048.jpg" alt="Online Banking">
+                <img src="https://png.pngtree.com/png-clipart/20210829/original/pngtree-online-banking-icon-png-png-image_6684048.jpg" alt="E-Wallet">
                 <h3>Online Banking</h3>
-                <p>Convenient online transactions.</p>
-                <button class="pay-button" onclick="showModal()">Pay Now</button>
+                <p>onvenient online transactions.</p>
+                <button class="pay-button" onclick="showForm()">Pay Now</button>
             </div>
+                            <div class="payment-methods">
             <div class="payment-box">
-                <img src="https://static.vecteezy.com/system/resources/previews/012/184/580/non_2x/cash-payment-outline-color-icon-vector.jpg" alt="Cash">
-                <h3>Cash</h3>
+                <img src="https://static.vecteezy.com/system/resources/previews/012/184/580/non_2x/cash-payment-outline-color-icon-vector.jpg" alt="E-Wallet">
+                <h3></h3>
                 <p>Pay in cash at our store.</p>
-                <button class="pay-button" onclick="showModal()">Pay Now</button>
+                <button class="pay-button" onclick="showForm()">Pay Now</button>
             </div>
+                              
         </div>
     </section>
 
-    <div id="thankYouModal" class="modal hidden">
+    <div id="paymentForm" class="modal hidden">
         <div class="modal-content">
-            <p> Payment information </p>
-            <p>Thanks! 🎉</p>
+            <h2>Enter Your Details</h2>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password">
+            </div>
+            <button class="submit-button" onclick="showComplete()">Submit</button>
+        </div>
+    </div>
+
+    <div id="completeModal" class="modal hidden">
+        <div class="modal-content">
+            <p>Complete! 🎉</p>
             <button class="close-button" onclick="closeModal()">Close</button>
         </div>
     </div>
 
     <script>
-        function showModal() {
-            document.getElementById('thankYouModal').classList.remove('hidden');
+        function showForm() {
+            document.getElementById('paymentForm').classList.remove('hidden');
+        }
+        function showComplete() {
+            document.getElementById('paymentForm').classList.add('hidden');
+            document.getElementById('completeModal').classList.remove('hidden');
         }
         function closeModal() {
-            document.getElementById('thankYouModal').classList.add('hidden');
+            document.getElementById('completeModal').classList.add('hidden');
         }
     </script>
 </body>
