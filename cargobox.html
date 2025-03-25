@@ -19,90 +19,47 @@
             align-items: center;
         }
 
-        header {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
+        .container {
             background: rgba(0, 0, 0, 0.7);
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li {
-            display: inline;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .cargo-box-container {
-            background: rgba(0, 0, 0, 0.6);
             padding: 20px;
+            margin-top: 50px;
             border-radius: 10px;
-            width: 50%;
-            margin: auto;
-            backdrop-filter: blur(10px);
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
         }
 
-        .cargo-box-container img {
+        .container img {
             width: 100%;
-            max-width: 200px;
+            max-width: 400px;
             border-radius: 10px;
             margin-bottom: 15px;
         }
 
-        .rent-btn {
-            background: #28a745;
+        .btn {
+            background: #007BFF;
             color: white;
             border: none;
             padding: 10px 15px;
             font-size: 18px;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 10px;
+            margin: 10px;
         }
 
-        .rent-btn:hover {
-            background: #218838;
+        .btn:hover {
+            background: #0056b3;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">Rental Bikes</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="renting.html">Renting</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="payment.html">Payment</a></li>
-                <li><a href="additional_service.html">Additional Service</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="cargo-box-container">
-        <img src="https://raw.githubusercontent.com/OmarZwei-RentalBicyle/Rental-Bicyle/f3b679c211dd935981d0d678c25cde3926e623cd/325d0e1d2d59b0c14f317740a12c5a60.jpg" alt="Cargo Box">
+    <div class="container">
         <h2>Cargo Box Rental</h2>
-        <p>The Cargo Box is perfect for carrying extra luggage, groceries, or equipment. Sturdy and spacious, it ensures a smooth and convenient ride.</p>
-        <h3> Price:</h3>
-        <p>Per Ride: 1.000đ</p>
-        <button class="rent-btn" onclick="location.href='payment.html'">Rent Now</button>
+        <img src="https://raw.githubusercontent.com/OmarZwei-RentalBicyle/Rental-Bicyle/f3b679c211dd935981d0d678c25cde3926e623cd/325d0e1d2d59b0c14f317740a12c5a60.jpg" alt="Cargo Box">
+        <p>Rent a Cargo Box for extra storage on your bike rides. Perfect for carrying heavy loads easily and securely.</p>
+        <p>Price: $15 per day</p>
+        <button class="btn" onclick="location.href='payment.html'">Rent Now</button>
+        <button class="btn" onclick="location.href='renting.html'">No</button>
     </div>
 </body>
 </html>
