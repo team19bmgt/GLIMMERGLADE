@@ -99,11 +99,6 @@
             margin-bottom: 10px;
         }
 
-        .points-system {
-            background: rgba(255, 223, 186, 0.9);
-            font-size: 24px;
-            font-weight: bold;
-        }
 
         .stats-container {
             display: flex;
@@ -146,6 +141,31 @@
     font-weight: bold;
     color: #ffcc00;
 }
+      /* Tour Box Styling */
+.tour-box {
+    display: block;
+    text-decoration: none;
+    color: white;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tour-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.tour-box:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
 
     </style>
 </head>
@@ -170,19 +190,21 @@
     </section>
 
     <div class="service-container">
-        <div class="points-system">
-            Customer Points: <span id="customer-points">0</span> 🌟
-        </div>
         <div class="stats-container">
             <div class="stats-box">Calories Burned: <span id="calories">0</span>🔥kcal</div>
             <div class="stats-box">Distance Traveled: <span id="distance">0</span> km</div>
         </div>
         <div class="service-row">
-            <div class="service-box">
-                <img src="https://www.conicaltravel.com/wp-content/uploads/2019/09/CA02-ava-373x249.jpg" alt="Adventure Tour">
-                <h3>Adventure Tour</h3>
-                <p>Join our exclusive guided bike tours!</p>
-            </div>
+          
+<!-- Khung Tour -->
+<a href="tour.html" class="tour-box">
+    <div class="tour-content">
+        <img src="https://www.conicaltravel.com/wp-content/uploads/2019/09/CA02-ava-373x249.jpg" alt="Tour Image">
+        <h3>Adventure Tour</h3>
+        <p>Join our exclusive guided bike tours!</p>
+    </div>
+</a>
+
             <div class="service-box">
                 <img src="https://www.adventurecycling.org/wp-content/uploads/2023/04/E3A7CC54-62E1-BC68-6489264CA7F4A8FB_custom1200xauto.jpg" alt="Riding Accessories">
                 <h3>Riding Accessories</h3>
