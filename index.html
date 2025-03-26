@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background: url('Cover Facebook UNIBIKE.png') no-repeat center center fixed;
+            background: url('https://cdn.photoroom.com/v2/image-cache?path=gs://background-7ef44.appspot.com/backgrounds_v3/white/01_-_white.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
             display: flex;
@@ -19,14 +19,20 @@
             align-items: center;
         }
 
-        header {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            background: rgba(0, 0, 0, 0.7);
-        }
+header {
+    width: 100%;
+    height: 200px; /* Điều chỉnh chiều cao theo mong muốn */
+    background-image: url('Cover Facebook UNIBIKE.png'); /* Đường dẫn đến ảnh */
+    background-size: cover; /* Giúp ảnh phủ hết phần header */
+    background-position: center; /* Căn giữa ảnh */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Tạo hiệu ứng mờ nếu cần */
+}
+
 
         .logo {
             font-size: 24px;
