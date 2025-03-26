@@ -104,6 +104,17 @@
         .redeem-btn:hover {
             background: #e68a00;
         }
+      .points-system {
+    background: rgba(255, 215, 0, 0.9); /* Màu vàng gold */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+    margin-left: 20px;
+}
+
     </style>
 </head>
 <body>
@@ -121,7 +132,9 @@
             </ul>
         </nav>
     </header>
-
+          <div class="points-system">
+    <p>🔥 Your Points: <span id="userPoints">0</span> 🎯</p>
+            </div>
     <div class="container">
         <h1>🎁 Loyalty Program – Earn Points & Get Rewards 🚴</h1>
         <p>💡 Ride more, get more rewards!</p>
@@ -160,6 +173,21 @@
 
         <a href="renting.html" class="redeem-btn">👉 Rent a car now</a>
     </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let userPoints = localStorage.getItem("userPoints") || 0; // Lấy điểm từ LocalStorage
+        document.getElementById("userPoints").textContent = userPoints;
+    });
+
+    function updatePoints(newPoints) {
+        let currentPoints = parseInt(localStorage.getItem("userPoints") || 0);
+        currentPoints += newPoints;
+        localStorage.setItem("userPoints", currentPoints);
+        document.getElementById("userPoints").textContent = currentPoints;
+    }
+</script>
+
 
 </body>
 </html>
+
