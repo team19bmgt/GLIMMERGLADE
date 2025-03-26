@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycling Tour - Khám Phá Cùng Chúng Tôi</title>
+    <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Cài đặt font chữ và reset CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+}
+
+/* Background blur */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://wallpapersok.com/images/hd/all-black-trek-road-bike-1w6h4k47rut0rora.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 24px;
+}
+
+/* Giới thiệu */
+.intro {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Danh sách tour */
+.tour-list {
+    margin: 30px auto;
+    width: 80%;
+}
+
+/* Khung tour */
+.tour {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 60%;
+    margin: 20px auto;
+    position: relative;
+}
+
+/* Hình ảnh tour */
+.tour img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+  </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cycling Tour - Hành Trình Đạp Xe</h1>
+    </header>
+
+    <section class="intro">
+        <h2>Chào mừng đến với Cycling Tour</h2>
+        <p>Khám phá những cung đường đẹp nhất bằng xe đạp. Hãy chọn hành trình phù hợp với bạn!</p>
+    </section>
+
+    <section class="tour-list">
+        <h2>Danh Sách Tour</h2>
+
+        <div class="tour">
+            <img src="https://bikeboard.cc/_uploads/_fotos_thumbs/thumb_207473_w1248h702c4_76_2496_1404.jpg?1719131445" alt="Núi Bà Đen">
+            <h3>🌄 Tour Núi Bà Đen</h3>
+            <p><strong>📍 Địa điểm:</strong> Tây Ninh</p>
+            <p><strong>🚴 Độ dài:</strong> 80 km</p>
+            <p><strong>🔥 Lượng calo tiêu hao:</strong> ~2,500 kcal</p>
+            <p><strong>⭐ Điểm tích lũy:</strong> 50 điểm</p>
+            <p><strong>💰 Ngân sách:</strong> 300,000 VNĐ</p>
+        </div>
+
+        <div class="tour">
+            <img src="https://ik.imagekit.io/tvlk/blog/2023/02/du-lich-ho-tram-1.jpg" alt="Hồ Tràm">
+            <h3>🌊 Tour Hồ Tràm</h3>
+            <p><strong>📍 Địa điểm:</strong> Bà Rịa - Vũng Tàu</p>
+            <p><strong>🚴 Độ dài:</strong> 120 km</p>
+            <p><strong>🔥 Lượng calo tiêu hao:</strong> ~3,500 kcal</p>
+            <p><strong>⭐ Điểm tích lũy:</strong> 70 điểm</p>
+            <p><strong>💰 Ngân sách:</strong> 500,000 VNĐ</p>
+        </div>
+
+        <div class="tour">
+            <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2021/09/thac-pongour-7.jpg" alt="Thác Pongour">
+            <h3>🏞 Tour Đà Lạt - Thác Pongour</h3>
+            <p><strong>📍 Địa điểm:</strong> Lâm Đồng</p>
+            <p><strong>🚴 Độ dài:</strong> 150 km</p>
+            <p><strong>🔥 Lượng calo tiêu hao:</strong> ~4,000 kcal</p>
+            <p><strong>⭐ Điểm tích lũy:</strong> 90 điểm</p>
+            <p><strong>💰 Ngân sách:</strong> 700,000 VNĐ</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Liên hệ: info@cyclingtour.com | Hotline: 0123-456-789</p>
+    </footer>
+
+</body>
+</html>
