@@ -124,6 +124,29 @@
                 gap: 20px;
             }
         }
+      /* Time Remain Section */
+.time-remain {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px auto;
+    width: 50%;
+    color: white;
+}
+
+.time-remain h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#countdown {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
     </style>
 </head>
 <body>
@@ -171,5 +194,38 @@
     <script>
         document.getElementById('customer-points').innerText = localStorage.getItem('points') || 0;
     </script>
+  <!-- Time Remain Section -->
+<section class="time-remain">
+    <h2>⏳ Time Remain</h2>
+    <p id="countdown">0</p>
+    <p> You have to return the bike</p>
+</section>
+
+<!-- Script Countdown -->
+<script>
+    // Cấu hình thời gian thuê (giờ, phút, giây)
+    const rentalDuration = 2 * 60 * 60; // 2 giờ (đổi đơn vị sang giây)
+    let timeLeft = rentalDuration;
+
+    function updateCountdown() {
+        if (timeLeft <= 0) {
+            document.getElementById("countdown").innerHTML = "🚨 Hết thời gian thuê!";
+            return;
+        }
+
+        let hours = Math.floor(timeLeft / 3600);
+        let minutes = Math.floor((timeLeft % 3600) / 60);
+        let seconds = timeLeft % 60;
+
+        document.getElementById("countdown").innerHTML = `${hours}h : ${minutes}m : ${seconds}s`;
+        timeLeft--;
+
+        setTimeout(updateCountdown, 1000);
+    }
+
+    // Bắt đầu đếm ngược khi trang tải
+    window.onload = updateCountdown;
+</script>
+
 </body>
 </html>
