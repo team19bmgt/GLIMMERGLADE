@@ -96,11 +96,69 @@ body::before {
     z-index: -1;
 }
 
-/* Header */
+/* Header Styling */
 header {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+    /* Mobile Menu Button */
+.menu-toggle {
+    display: none;
     font-size: 24px;
+    cursor: pointer;
+}
+    /* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #444;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .points-system {
+        margin-top: 10px;
+    }
 }
 
 /* Giới thiệu */
@@ -157,7 +215,7 @@ footer {
     <header>
         <div class="logo"> <img src="logo.png" alt="Logo">Rental Unibikes</div>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="renting.html">Renting</a></li>
                 <li><a href="service.html">Services</a></li>
@@ -166,6 +224,7 @@ footer {
                 <li><a href="loyal.html">Loyalty Program</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            <div class="menu-toggle">&#9776;</div>
         </nav>
     </header>
 
@@ -204,6 +263,16 @@ footer {
     <footer>
         <p>Contact: https://omarzwei-rentalbicyle.github.io/Rental-Bicyle/index.html| Hotline: 0123-456-789</p>
     </footer>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    let userPoints = localStorage.getItem("userPoints") || 0;
+    document.getElementById("userPoints").textContent = userPoints;
+
+    document.querySelector(".menu-toggle").addEventListener("click", function () {
+        document.querySelector(".nav-links").classList.toggle("active");
+    });
+});
+</script>
 
 </body>
 </html>
