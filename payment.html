@@ -6,6 +6,7 @@
     <title>Payment - Rental Unibikes</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+      
         .modal {
             display: none;
             position: fixed;
@@ -27,6 +28,7 @@
             text-align: center;
             font-size: 20px;
             color: white;
+          
         }
 
         .hidden {
@@ -176,6 +178,14 @@
                 width: 60px;
             }
         }
+
+      .img-container img {
+    max-width: 100%; /* Không vượt quá kích thước khung */
+    max-height: 300px; /* Giới hạn chiều cao */
+    object-fit: contain; /* Giữ nguyên tỷ lệ */
+}
+
+      
     </style>
 </head>
 <body>
@@ -237,7 +247,7 @@
     </div>
 
 <div id="completeModal" class="modal hidden">
-    <div class="modal-content">
+    <div class="img-container">
         <img src="https://scontent-sin2-2.xx.fbcdn.net/v/t1.15752-9/486396509_1165466371938542_4871799035469767987_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ky3mt7SvOfQQ7kNvgFlbYqY&_nc_oc=AdkANBLATaeiTnvpcwNh3_O5dmfSuHB0lBa1QIip6mi5f2gMdAywrxMFblc9ttMfW0vsnxsxJUGlXn3qwyTQdf8H&_nc_zt=23&_nc_ht=scontent-sin2-2.xx&oh=03_Q7cD1wF4wa1W_OKzhdcx0UTdBPUjyyw8WuqJsJmi4YQfJbGN0g&oe=680EEF88" 
              alt="Success Icon" class="modal-image">
         <p>Complete! 🎉</p>
