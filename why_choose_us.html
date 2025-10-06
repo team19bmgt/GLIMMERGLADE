@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Optional: add a background color */
+}
+
+.container {
+    display: flex;
+    width: 90%; /* Adjust as needed */
+    max-width: 1200px; /* Adjust as needed */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* To contain the image */
+}
+
+.content {
+    flex: 1; /* Takes up remaining space */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    flex-basis: 75%; /* Image takes up 75% of the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    display: block;
+    max-width: 100%;
+    max-height: 80vh; /* Image takes up max 80% of the viewport height */
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Optional: Add some responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image-container {
+        flex-basis: auto; /* Reset flex-basis */
+        width: 100%;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
+<head>
+    <title>Why Choose Us?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Why Choose Us?</h1>
+            <p>
+                <!-- Add your text content here -->
+                Đây là phần nội dung giải thích lý do chọn chúng tôi.
+                Bạn có thể thêm các đoạn văn, danh sách, hoặc bất kỳ thông tin nào khác vào đây.
+                Hãy mô tả chi tiết về lợi ích, dịch vụ, hoặc điểm mạnh của bạn.
+            </p>
+            <!-- Add more content as needed -->
+        </div>
+        <div class="image-container">
+            <!-- Replace 'your-image.jpg' with the actual path to your image -->
+            <img src="/content/Ảnh chụp màn hình 2025-10-06 142007.png" alt="Why Choose Us Image">
+        </div>
+    </div>
+</body>
+</html>
