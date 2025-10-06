@@ -3,15 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renting - Rental Unibikes</title>
+    <title>GLIMMERGLADE</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* What We Offer Section */
+        .offer-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+        }
+
+        .offer-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .offer-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+         .offer-box {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 50px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+        .offer-box img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background: url('Cover Facebook UNIBIKE.png') no-repeat center center fixed;
+            background: url('https://i.pinimg.com/originals/84/44/ed/8444ed30f4c6f9aabf29677bee61e2e3.gif') no-repeat center center fixed;
             background-size: cover;
             color: white;
             display: flex;
@@ -25,7 +62,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('Cover Facebook UNIBIKE.png') no-repeat center center fixed;
+    background: url('https://i.pinimg.com/originals/84/44/ed/8444ed30f4c6f9aabf29677bee61e2e3.gif') no-repeat center center fixed;
     background-size: cover;
     filter: blur(0px); /* Điều chỉnh độ mờ */
     z-index: -1; /* Đặt lớp phủ phía sau nội dung */
@@ -139,11 +176,11 @@
 </head>
 <body>
     <header>
-        <div class="logo"> <img src="logo.png" alt="Logo">Rental Unibikes</div>
+        <div class="logo"> <img src=".png" alt="Logo">Suncatcher X Figure</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="renting.html">Renting</a></li>
+                <li><a href="renting.html">Our Product</a></li>
                 <li><a href="service.html">Services</a></li>
                 <li><a href="additional_service.html">Additional Service</a></li>
                 <li><a href="payment.html">Payment</a></li>
@@ -153,33 +190,25 @@
         </nav>
     </header>
     
-    <div class="renting-container">
-        <div class="rent-option">
-            <h2>Rent Per Ride</h2>
-            <button class="rent-btn" onclick="toggleBikeOptions('ride-options')">RENT NOW</button>
-            <div class="bike-options" id="ride-options">
-                <button onclick="location.href='cargobox.html'">Regular Bike (3.000đ)</button>
-                <button onclick="location.href='cargobox.html'">Sport Bike (5.000đ)</button>
+      <section class="offer-section">
+        <h2>What We Offer</h2>
+        <div class="offer-container">
+            <div class="offer-box">
+                <img src="https://i.pinimg.com/736x/97/e5/98/97e59872a7dcb0654fa49f1e1d6d1d10.jpg" alt="Plain Figures">
+                <h3>Plain Figures</h3>
+                <p>High-detail characters, plain or fully customized.</p>
+            </div>
+            <div class="offer-box">
+                <img src="https://i.pinimg.com/1200x/50/0f/e2/500fe2b6f5d6011c25e21f3eb99caa54.jpg" alt="Light-Infused Model">
+                <h3>Light-Infused Model</h3>
+                <p> Arts that sparkle with real light </p>
+            </div>
+            <div class="offer-box">
+                <img src="https://i.pinimg.com/736x/19/3e/b2/193eb2664ea8fcb0775b9b420f77e942.jpg">
+                <h3>Crystal Accessories</h3>
+                <p>Elegant charms inspired by your favorite worlds </p>
             </div>
         </div>
-
-        <div class="rent-option">
-            <h2>Rent Per Hour</h2>
-            <button class="rent-btn" onclick="toggleBikeOptions('hour-options')">RENT NOW</button>
-            <div class="bike-options" id="hour-options">
-                <button onclick="location.href='cargobox.html'">Regular Bike (10.000đ)</button>
-                <button onclick="location.href='cargobox.html'">Sport Bike (14.000đ)</button>
-            </div>
-        </div>
-
-        <div class="rent-option">
-            <h2>Rent Per Day</h2>
-            <button class="rent-btn" onclick="toggleBikeOptions('day-options')">RENT NOW</button>
-            <div class="bike-options" id="day-options">
-                <button onclick="location.href='cargobox.html'">Regular Bike (35.000đ)</button>
-                <button onclick="location.href='cargobox.html'">Sport Bike (40.000đ)</button>
-            </div>
-        </div>
-    </div>
+    </section>
 </body>
 </html>
