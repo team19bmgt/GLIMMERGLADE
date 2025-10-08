@@ -45,8 +45,6 @@
         margin: 0;
         padding: 0;
         transition: transform 0.3s cubic-bezier(.4,0,.2,1), opacity 0.3s;
-        z-index: 1001;
-        /* Đảm bảo menu luôn trên overlay */
       }
       .nav-links li {
         display: inline;
@@ -102,7 +100,7 @@
           width: 100vw;
           height: 100vh;
           background: rgba(20,20,20,0.95);
-          z-index: 1001; /* Đảm bảo menu trên overlay */
+          z-index: 1000;
           opacity: 0;
           pointer-events: none;
           transform: translateY(-40px) scale(0.98);
