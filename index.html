@@ -96,11 +96,8 @@
             height: 40px;
             margin-right: 10px;
         }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
+
+    
 
         nav ul li {
             display: inline;
@@ -243,8 +240,9 @@
     color: #ff9900;
     text-decoration: underline;
 }
-/* ✅ Responsive cho màn hình nhỏ hơn 768px (mobile & tablet) */
+/* ✅ Responsive hoàn chỉnh cho mobile & tablet */
 @media (max-width: 768px) {
+  /* Bố cục tổng thể */
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -256,12 +254,50 @@
     margin-bottom: 10px;
   }
 
+  /* Nút hamburger ☰ */
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-toggle:active {
+    transform: scale(1.1);
+  }
+
+  /* Menu khi chưa bấm */
+  nav {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  /* Menu khi bấm ☰ */
+  nav.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   nav ul {
     flex-direction: column;
     gap: 10px;
-    padding-left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: left;
+    padding: 10px;
   }
 
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  /* Các phần khác */
   .hero {
     padding: 60px 10px;
   }
@@ -302,73 +338,6 @@
   .login-section {
     width: 90%;
     margin: 30px auto;
-  }
-}
-/* Ẩn nút hamburger trên máy tính */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-}
-
-/* Mặc định nav hiển thị ngang trên desktop */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-/* ✅ Khi màn hình nhỏ hơn 768px → bật chế độ mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* Hiện nút ☰ */
-  }
-
-  nav {
-    display: none; /* Ẩn menu mặc định */
-    width: 100%;
-  }
-
-  nav ul {
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.9);
-    width: 100%;
-    text-align: left;
-    padding: 10px;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  /* Khi menu bật */
-  nav.active {
-    display: block;
-  }
-}
-        /* 💅 Hiệu ứng mượt cho biểu tượng ☰ */
-.menu-toggle {
-  transition: transform 0.3s ease; /* Hiệu ứng khi bấm */
-}
-
-.menu-toggle:active {
-  transform: scale(1.1); /* Phóng to nhẹ khi nhấn */
-}
-
-/* 💨 Hiệu ứng trượt mượt cho menu */
-@media (max-width: 768px) {
-  nav {
-    display: none;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-  }
-
-  nav.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
