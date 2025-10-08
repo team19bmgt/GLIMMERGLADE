@@ -42,10 +42,10 @@
     gap: 0;
 }
 .offer-row {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
 }
 .offer-row.single {
     justify-content: center;
@@ -227,10 +227,32 @@
     flex-direction: column;
     align-items: center;
   }
-
+  .offer-row {
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow-x: auto;
+  }
   .offer-box {
-    width: 90%;
-    margin: 20px 0;
+    width: 110px;
+    min-width: 110px;
+    max-width: 110px;
+    margin: 8px 0;
+    padding: 8px 2px;
+  }
+  .offer-box img {
+    width: 58px;
+    height: 58px;
+  }
+  .offer-box h3 {
+    font-size: 12px;
+    margin: 8px 0 4px 0;
+  }
+  .btn, .rent-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+    margin: 4px 0;
   }
 
   .poster-section img {
@@ -246,6 +268,7 @@
     width: 90%;
     margin: 30px auto;
   }
+}
 }
         footer {
     width: 100%;
@@ -279,6 +302,7 @@
 .offer-box.resin-special .btn:hover {
     background: #259925;
 }
+        
 
     </style>
     <script>
