@@ -304,24 +304,100 @@
     margin: 30px auto;
   }
 }
+/* Ẩn nút hamburger trên máy tính */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mặc định nav hiển thị ngang trên desktop */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* ✅ Khi màn hình nhỏ hơn 768px → bật chế độ mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Hiện nút ☰ */
+  }
+
+  nav {
+    display: none; /* Ẩn menu mặc định */
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  /* Khi menu bật */
+  nav.active {
+    display: block;
+  }
+}
+        /* 💅 Hiệu ứng mượt cho biểu tượng ☰ */
+.menu-toggle {
+  transition: transform 0.3s ease; /* Hiệu ứng khi bấm */
+}
+
+.menu-toggle:active {
+  transform: scale(1.1); /* Phóng to nhẹ khi nhấn */
+}
+
+/* 💨 Hiệu ứng trượt mượt cho menu */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  nav.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-                        <img src="LOGO.png" alt="Logo">
-GLIMMERGLADE </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="renting.html">Our Product</a></li>
-                <li><a href="payment.html">Payment</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+   <header>
+  <div class="logo">
+    <img src="LOGO.png" alt="Logo">
+    GLIMMERGLADE
+  </div>
+
+  <!-- Thêm nút hamburger -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="renting.html">Our Product</a></li>
+      <li><a href="payment.html">Payment</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
 
       <section class="hero">
         <h1>Welcome to GLIMMERGLADE </h1>
@@ -405,6 +481,15 @@ GLIMMERGLADE </div>
         <button type="submit">Login</button>
     </form>
 </section>
+    <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+</script>
+
 
 
 
