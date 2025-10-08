@@ -96,8 +96,11 @@
             height: 40px;
             margin-right: 10px;
         }
-
-    
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
 
         nav ul li {
             display: inline;
@@ -240,9 +243,8 @@
     color: #ff9900;
     text-decoration: underline;
 }
-/* ✅ Responsive hoàn chỉnh cho mobile & tablet */
+/* ✅ Responsive cho màn hình nhỏ hơn 768px (mobile & tablet) */
 @media (max-width: 768px) {
-  /* Bố cục tổng thể */
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -254,73 +256,72 @@
     margin-bottom: 10px;
   }
 
- /* Mặc định cho máy tính */
-.menu-toggle {
-  display: none;
-}
-
-/* ✅ Responsive cho mobile */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu-toggle {
-    display: block;
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-  }
-
-  nav {
-    display: none;
-    width: 100%;
-  }
-
-  nav.active {
-    display: block;
-  }
-
   nav ul {
     flex-direction: column;
-    background: rgba(0,0,0,0.9);
-    padding: 10px;
+    gap: 10px;
+    padding-left: 0;
   }
 
-  nav ul li {
-    margin: 10px 0;
+  .hero {
+    padding: 60px 10px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .offer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer-box {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  .poster-section img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-section {
+    padding: 30px 15px;
+  }
+
+  .login-section {
+    width: 90%;
+    margin: 30px auto;
   }
 }
-
-        
-
 
 
     </style>
 </head>
 <body>
-   <header>
-  <div class="logo">
-    <img src="your-logo.png" alt="logo">
-    <h1>GLIMMERGLADE</h1>
-  </div>
-
-  <!-- ✅ Nút menu hamburger -->
-  <div class="menu-toggle" id="menu-toggle">☰</div>
-
-  <!-- ✅ Menu -->
-  <nav id="navbar">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Our Product</a></li>
-      <li><a href="#">Payment</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-  </nav>
-</header>
-
-
+    <header>
+        <div class="logo">
+                        <img src="LOGO.png" alt="Logo">
+GLIMMERGLADE </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="renting.html">Our Product</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
       <section class="hero">
         <h1>Welcome to GLIMMERGLADE </h1>
@@ -404,16 +405,6 @@
         <button type="submit">Login</button>
     </form>
 </section>
-
-    <script>
-  const menuToggle = document.getElementById("menu-toggle");
-  const navbar = document.getElementById("navbar");
-
-  menuToggle.addEventListener("click", () => {
-    navbar.classList.toggle("active");
-  });
-</script>
-
 
 
 
