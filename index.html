@@ -14,7 +14,7 @@
         padding: 0;
         margin: 0;
         position: relative;
-        z-index: 10;
+        z-index: 100;
       }
       .nav-content {
         display: flex;
@@ -44,7 +44,6 @@
         gap: 20px;
         margin: 0;
         padding: 0;
-        transition: transform 0.3s cubic-bezier(.4,0,.2,1), opacity 0.3s;
       }
       .nav-links li {
         display: inline;
@@ -67,22 +66,7 @@
         outline: none;
         margin-left: 20px;
       }
-      /* Overlay blur background khi menu mở */
-      .menu-overlay {
-        display: none;
-        position: fixed;
-        z-index: 999;
-        inset: 0;
-        background: rgba(30,30,30,0.35);
-        backdrop-filter: blur(8px);
-        transition: opacity 0.3s;
-        opacity: 0;
-      }
-      .menu-overlay.open {
-        display: block;
-        opacity: 1;
-      }
-      /* Responsive Hamburger + full screen nav menu */
+      /* Responsive Hamburger */
       @media (max-width: 768px) {
         .nav-content {
           flex-direction: row;
@@ -92,34 +76,34 @@
           font-size: 20px;
         }
         .nav-links {
+          display: none;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          background: rgba(0,0,0,0.96);
           flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          position: fixed;
-          top: 0; left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: rgba(20,20,20,0.95);
-          z-index: 1000;
-          opacity: 0;
-          pointer-events: none;
-          transform: translateY(-40px) scale(0.98);
+          width: 200px;
+          gap: 0;
+          border-radius: 0 0 8px 8px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+          z-index: 999;
         }
         .nav-links.open {
-          opacity: 1;
-          pointer-events: auto;
-          transform: translateY(0) scale(1);
+          display: flex;
         }
         .nav-links li {
           width: 100%;
-          text-align: center;
-          border: none;
-          margin: 18px 0;
+          display: block;
+          border-bottom: 1px solid #333;
+          text-align: left;
+        }
+        .nav-links li:last-child {
+          border-bottom: none;
         }
         .nav-links li a {
-          display: inline-block;
-          font-size: 28px;
-          padding: 16px 0;
+          display: block;
+          padding: 14px 24px;
+          font-size: 18px;
         }
         .hamburger {
           display: block;
@@ -185,8 +169,8 @@
         height: 100%;
         background: url('COVER.png') no-repeat center center fixed;
         background-size: cover;
-        filter: blur(10px); /* Điều chỉnh độ mờ */
-        z-index: -1; /* Đặt lớp phủ phía sau nội dung */
+        filter: blur(10px);
+        z-index: -1;
       }
       /* ... Giữ nguyên các phần hero, offer-section, about-section, v.v. như cũ */
       /* Responsive cho các section khác */
@@ -244,8 +228,6 @@
         </nav>
       </div>
     </div>
-    <!-- Overlay làm blur màn hình khi menu mở -->
-    <div class="menu-overlay" id="menu-overlay"></div>
 
       <section class="hero">
         <h1>Welcome to GLIMMERGLADE </h1>
@@ -316,34 +298,22 @@
         </form>
     </section>
 
-    <!-- Script cho menu hamburger và hiệu ứng -->
+    <!-- Script cho menu hamburger -->
     <script>
       const navToggle = document.getElementById('nav-toggle');
       const navMenu = document.getElementById('nav-menu');
-      const menuOverlay = document.getElementById('menu-overlay');
-
-      function openMenu() {
-        navMenu.classList.add('open');
-        menuOverlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      }
-      function closeMenu() {
-        navMenu.classList.remove('open');
-        menuOverlay.classList.remove('open');
-        document.body.style.overflow = '';
-      }
-      navToggle.addEventListener('click', () => {
-        if(navMenu.classList.contains('open')) closeMenu();
-        else openMenu();
+      navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('open');
       });
-      menuOverlay.addEventListener('click', closeMenu);
+      // Đóng menu khi bấm vào link (trên mobile)
       Array.from(navMenu.getElementsByTagName('a')).forEach(link => {
         link.addEventListener('click', () => {
-          if(window.innerWidth <= 768) closeMenu();
+          if(window.innerWidth <= 768) navMenu.classList.remove('open');
         });
       });
+      // Đảm bảo menu trở lại đúng trạng thái khi resize
       window.addEventListener('resize', () => {
-        if(window.innerWidth > 768) closeMenu();
+        if(window.innerWidth > 768) navMenu.classList.remove('open');
       });
     </script>
 </body>
