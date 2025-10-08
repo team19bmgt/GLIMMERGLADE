@@ -36,12 +36,21 @@
         }
 
         .offer-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 20px;
-        }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+.offer-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+.offer-row.single {
+    justify-content: center;
+    margin-top: -10px;
+}
          .offer-box {
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
@@ -265,24 +274,28 @@
     </header>
     
       <section class="offer-section">
-        <h2>What We Offer</h2>
-        <div class="offer-container">
+    <h2>What We Offer</h2>
+    <div class="offer-container">
+        <div class="offer-row">
             <div class="offer-box">
                 <img src="https://i.pinimg.com/736x/97/e5/98/97e59872a7dcb0654fa49f1e1d6d1d10.jpg" alt="Plain Figures">
                 <h3>Clay Model </h3>
-                 <button class="btn" onclick="location.href='payment.html'">ORDER NOW</button>
+                <button class="btn" onclick="location.href='payment.html'">ORDER NOW</button>
             </div>
             <div class="offer-box">
                 <img src="https://i.pinimg.com/736x/7d/6b/cb/7d6bcbd4e646e431162fcce159ec08c7.jpg" alt="Light-Infused Model">
                 <h3>Plastic Model</h3>
                 <button class="btn" onclick="location.href='payment.html'">ORDER NOW</button>
             </div>
+        </div>
+        <div class="offer-row single">
             <div class="offer-box">
-                <img src="https://i.pinimg.com/736x/19/3e/b2/193eb2664ea8fcb0775b9b420f77e942.jpg">
+                <img src="https://i.pinimg.com/736x/19/3e/b2/193eb2664ea8fcb0775b9b420f77e942.jpg" alt="Crystal Accessories">
                 <h3>Crystal Accessories</h3>
                 <button class="btn" onclick="location.href='payment.html'">ORDER NOW</button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 </body>
 </html>
