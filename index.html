@@ -304,87 +304,24 @@
     margin: 30px auto;
   }
 }
-        .menu-overlay {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  inset: 0;
-  background: rgba(30,30,30,0.35);
-  backdrop-filter: blur(8px);
-  transition: opacity 0.3s;
-  opacity: 0;
-}
-.menu-overlay.open {
-  display: block;
-  opacity: 1;
-}
-.hamburger {
-  display: none;
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  outline: none;
-  margin-left: 20px;
-}
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background: rgba(20,20,20,0.95);
-    z-index: 1001;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-40px) scale(0.98);
-    transition: transform 0.3s cubic-bezier(.4,0,.2,1), opacity 0.3s;
-  }
-  nav ul.open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0) scale(1);
-  }
-  nav ul li {
-    width: 100%;
-    text-align: center;
-    border: none;
-    margin: 18px 0;
-  }
-  nav ul li a {
-    display: inline-block;
-    font-size: 28px;
-    padding: 16px 0;
-  }
-  .hamburger {
-    display: block;
-  }
-}
 
 
     </style>
 </head>
 <body>
-<header>
-    <div class="logo">
-        <img src="LOGO.png" alt="Logo">
-        GLIMMERGLADE
-    </div>
-    <nav>
-        <button class="hamburger" id="nav-toggle" aria-label="Menu">&#9776;</button> <!-- Thêm dòng này -->
-        <ul id="nav-menu"> <!-- Thêm id="nav-menu" -->
-            <li><a href="index.html">Home</a></li>
-            <li><a href="renting.html">Our Product</a></li>
-            <li><a href="payment.html">Payment</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
-</header>
-<!-- Thêm dòng này ngay dưới header -->
-<div class="menu-overlay" id="menu-overlay"></div>
+    <header>
+        <div class="logo">
+                        <img src="LOGO.png" alt="Logo">
+GLIMMERGLADE </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="renting.html">Our Product</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
       <section class="hero">
         <h1>Welcome to GLIMMERGLADE </h1>
