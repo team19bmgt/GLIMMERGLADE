@@ -407,6 +407,77 @@ GLIMMERGLADE </div>
     </form>
 </section>
 
+           <form id="signupForm">
+  <input type="text" name="user_name" placeholder="Full name" required>
+  <input type="email" name="user_email" placeholder="Email" required>
+  <button type="submit">Regreis     <h2>💡 5. Limited Editions & Custom Designs</h2>
+            <p>We collaborate with independent artists and fan creators to make exclusive editions you won’t find anywhere else — turning your favorite characters into collector-worthy treasures. </p>
+            <h2>🌈 6. Sustainable & Handmade Touch</h2>
+            <p>Each figure is produced in small batches, minimizing waste and ensuring attention to detail. You’re supporting a brand that values both craftsmanship and environmental care. </p>
+            <h2>💬 7. Built by Fans, for Fans</h2>
+            <p>We’re passionate fans ourselves — we understand what collectors truly look for: accuracy, emotion, and beauty. Every figure is designed with heart, not just for profit. </p>
+        </div>
+    </section>
+
+    
+      
+        </div>
+
+    <!-- About Us Section -->
+    <section class="about-section">
+        <h2>About Us</h2>
+        <p>At GlimmerGlade, we blend anime artistry with the beauty of light.Our passion lies in creating high-quality anime figures and crystal accessories that don't just sit on your shelf - they shine with life and emotion.
+</p>
+        <p></p>
+        <p>Founded by a team of dedicated fans and creators, we aim to bring collectors authentic craftsmanship, innovative designs, and a touch of magic in every piece. Each figure and accessory is locally designed, hand-detailed, and inspired by the characters we love.
+</p>
+        <p></p>
+        <p>Because to us, collecting isn't just a hobby - it's about celebrating stories, art, and the light that connects us all.</p>
+    </section>
+
+  <!-- Login Section -->
+<section class="login-section">
+    <h2>Student Login</h2>
+    <form action="renting.html" method="GET">
+        <label for="studentId">Student ID:</label>
+        <input type="text" id="studentId" name="studentId" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+</section>
+
+           <form id="signupForm">
+  <input type="text" name="user_name" placeholder="Full name" required>
+  <input type="email" name="user_email" placeholder="Email" required>
+  <button type="submit"> Login </button>
+</form>
+
+           <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("WEl13Y1oJbn5azqWt"); // <-- Thay bằng Public Key của bạn
+  })();
+</script>
+
+      <script>
+  document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Ngăn reload trang
+
+    emailjs.sendForm('service_la6kyec', 'template_dgsrsfn', this)
+      .then(function(response) {
+        alert('✅ Email sent successfully! Thank you for signing up..');
+        console.log('SUCCESS!', response.status, response.text);
+      }, function(error) {
+        alert('❌ Email sending failed. Please try again later.');
+        console.log('FAILED...', error);
+      });
+  });
+</script>
+
+
 
 
 </body>
